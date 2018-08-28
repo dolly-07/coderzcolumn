@@ -1,4 +1,4 @@
-### CoderzColumn is created for Developers by Developers for betterment of Development.
+### CoderzColumn : Developed for Developers by Developers for betterment of Development.
 
 ### About 
 We developed coderzcolumn for sharing knowledge on various topics like SEO, Android, Python, Data Science, Machine Learning/ Deep Learning. We'll include various blogs which will be small enough to complete within 10 mins of read. We'll also include tutorials which will include step by step guide on various libraris and topics. Apart from them, we are also planning to include explanation of research papers in simple language avoiding complicated mathematics part and will try to include implementations as well.
@@ -22,4 +22,4 @@ CoderzColumn is developed using Python3 (v3.6.4), Django (v2.1) for server side 
 
 
 ### Request to submit bug / addition of feature
-Please follow template created for raising bu or creating new feature when raising new issue.
+Please follow template created for raising bug or creating new feature when raising new issue.
