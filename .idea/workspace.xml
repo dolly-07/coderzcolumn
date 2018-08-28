@@ -2,23 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f1c3b31-bb14-40e4-aaa3-93961a207881" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/blogs/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/about/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs/static/blogs/images/cc.png" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/static/blogs/images/cc.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/blogs/templates/blogs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/templates/blogs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blogs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blogs/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coderzcolumn/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/coderzcolumn/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tutorials/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/tutorials/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,7 +16,7 @@
     <session id="-770753425">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.101" value="1" />
           <entry key="project.open.time.112" value="1" />
           <entry key="project.open.time.118" value="1" />
@@ -42,7 +28,8 @@
           <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.85" value="1" />
           <entry key="project.open.time.96" value="1" />
-          <entry key="project.opened" value="11" />
+          <entry key="project.open.time.99" value="1" />
+          <entry key="project.opened" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -61,15 +48,15 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="5298" />
+          <entry key="html" value="5806" />
           <entry key="py" value="2800" />
-          <entry key="txt" value="134" />
+          <entry key="txt" value="161" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="5298" />
-          <entry key="PLAIN_TEXT" value="134" />
+          <entry key="HTML" value="5806" />
+          <entry key="PLAIN_TEXT" value="161" />
           <entry key="Python" value="2800" />
         </counts>
       </usages-collector>
@@ -80,7 +67,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blogs/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="420">
               <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
               <folding>
                 <element signature="e#24#63#0" expanded="true" />
@@ -105,10 +92,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blogs/templates/blogs/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="265">
-              <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
+            <state relative-caret-position="120">
+              <caret line="24" column="73" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="73" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#1115#1121#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,8 +106,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coderzcolumn/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="315">
+              <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
               <folding>
                 <element signature="e#646#687#0" expanded="true" />
               </folding>
@@ -187,8 +176,8 @@
         <option value="$PROJECT_DIR$/blogs/urls.py" />
         <option value="$PROJECT_DIR$/about/urls.py" />
         <option value="$PROJECT_DIR$/blogs/views.py" />
-        <option value="$PROJECT_DIR$/coderzcolumn/urls.py" />
         <option value="$PROJECT_DIR$/blogs/models.py" />
+        <option value="$PROJECT_DIR$/coderzcolumn/urls.py" />
         <option value="$PROJECT_DIR$/blogs/templates/blogs/index.html" />
       </list>
     </option>
@@ -383,13 +372,21 @@
       <option name="project" value="LOCAL" />
       <updated>1535126110019</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="CC: 1 - Committing latest view related change">
+      <created>1535442374273</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1535442374332</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1303" height="780" extended-state="7" />
+    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20796813" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21115538" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -439,7 +436,8 @@
     <MESSAGE value="CC: 1 - Committing Individual App creation with django" />
     <MESSAGE value="CC: 1 - Committing models and URLs" />
     <MESSAGE value="CC: 1 - Committing views and model changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="CC: 1 - Committing views and model changes" />
+    <MESSAGE value="CC: 1 - Committing latest view related change" />
+    <option name="LAST_COMMIT_MESSAGE" value="CC: 1 - Committing latest view related change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -578,6 +576,17 @@
     <entry file="file://$PROJECT_DIR$/blogs/static/blogs/images/cc.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/blogs/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="e#24#63#0" expanded="true" />
+            <marker date="1535437700459" expanded="true" signature="1202:1206" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/blogs/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -598,16 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/coderzcolumn/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
-          <folding>
-            <element signature="e#646#687#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blogs/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -618,23 +617,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blogs/models.py">
+    <entry file="file://$PROJECT_DIR$/coderzcolumn/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="25" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+        <state relative-caret-position="315">
+          <caret line="21" column="10" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding>
-            <element signature="e#24#63#0" expanded="true" />
-            <marker date="1535437700459" expanded="true" signature="1202:1206" ph="..." />
+            <element signature="e#646#687#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/blogs/templates/blogs/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="70" column="46" selection-start-line="70" selection-start-column="46" selection-end-line="70" selection-end-column="46" />
+        <state relative-caret-position="120">
+          <caret line="24" column="73" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="73" />
           <folding>
             <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#nav#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#1115#1121#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

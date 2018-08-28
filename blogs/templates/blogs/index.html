@@ -20,12 +20,12 @@
 <body>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-    <div class="container-fluid">
+    <div class="container-fluid m-0 p-0">
         <a class="navbar-brand font-italic" href="{% url 'home' %}" data-toggle="tooltip" title="Hooray!">
-            <img src="../static/blogs/images/cc.png" alt="" style="width:40px;height:30px;"> CoDerZcoLuMn
+            <img src="../static/blogs/images/cc.png" class="img-thumbnail" alt="" style="width:40px;height:30px;"> CoDerZcoLuMn
         </a>
         <form class="form-inline" action="" method="post">
-            <input class="form-control" type="text" placeholder="Enter Text">
+            <input class="form-control" type="text" placeholder="Enter Text">&nbsp;
             <button class="btn btn-success" type="submit">Search</button>
         </form>
         <ul class="navbar-nav">
@@ -39,24 +39,24 @@
                 <a class="text-primary nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" title="Hooray!">
                 Blogs
                 </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">SEO</a>
-                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Android</a>
-                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Machine Learning</a>
-                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Python</a>
-                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Data Science</a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item text-primary" href="#" data-toggle="tooltip" title="Hooray!">SEO</a>
+                    <a class="dropdown-item text-primary" href="#" data-toggle="tooltip" title="Hooray!">Android</a>
+                    <a class="dropdown-item text-primary" href="#" data-toggle="tooltip" title="Hooray!">Machine Learning</a>
+                    <a class="dropdown-item text-primary" href="#" data-toggle="tooltip" title="Hooray!">Python</a>
+                    <a class="dropdown-item text-primary" href="#" data-toggle="tooltip" title="Hooray!">Data Science</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="text-warning nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown" title="Hooray!">
                 Tutorials
                 </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">SEO</a>
-                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Android</a>
-                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Machine Learning</a>
-                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Python</a>
-                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Data Science</a>
+                <div class="dropdown-menu bg-dark">
+                    <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">SEO</a>
+                    <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">Android</a>
+                    <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">Machine Learning</a>
+                    <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">Python</a>
+                    <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">Data Science</a>
                 </div>
             </li>
             <li class="">
@@ -68,9 +68,9 @@
 
 
 {% if blogs %}
-<div class="card-columns" style="margin-top:65px;margin-bottom:170px;margin-left:15px;margin-right:15px;">
+<div class="card-columns" style="margin-top:63px;margin-bottom:110px;margin-left:15px;margin-right:15px;">
     {% for blog in blogs %}
-    <div class="card shadow-lg">
+    <div class="card shadow-lg rounded">
         <div class="card-header">
             <span class="badge badge-primary">{{ blog.category }}</span>
             <span class="float-right">
@@ -96,42 +96,43 @@
 </div>
 {% endif %}
 
-<nav class="navbar bg-dark navbar-dark fixed-bottom text-white-50">
-    <div class="container-fluid">
-      <div class="row mt-0">
-        <div class="col-md-4">
-          <h6 class="text-white">CoDerZColuMn</h6>
-          <p class="text-white">CoderzColumn publishes Blogs, Tutorials and Research Papers explanation on various topics like
-              SEO, Android, Python, Data Science, Machine Learning.</p>
+<nav class="navbar bg-dark navbar-dark fixed-bottom">
+    <div class="container-fluid m-0 p-0">
+      <div class="row m-0 p-0">
+        <div class="col-sm-4 m-0 p-0">
+          <h6 class="text-white pb-1 m-0">CoDerZColuMn</h6>
+          <p class="text-white p-0 m-0"><small>CoderzColumn publishes Blogs, Tutorials and Research Papers explanation on various topics like
+              SEO, Android, Python, Data Science, Machine Learning.</small></p>
         </div>
-        <div class="col-md-2 p-0">
-          <h6 class="text-uppercase text-white">Products</h6>
-          <ui class="nav flex-sm-column p-0">
-              <li class="navbar-nav nav-item"><a href="#!" class="nav-link">ResearchPapers</a></li>
-              <li class="navbar-nav nav-item"><a href="#!" class="nav-link">Blogs</a></li>
-              <li class="navbar-nav nav-item"><a href="#!" class="nav-link">Tutorials</a></li>
+        <div class="col-sm-2 m-0 p-0">
+          <h6 class="text-uppercase text-white m-0 pb-1">Products</h6>
+          <ui class="nav flex-column m-0 p-0">
+              <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>ResearchPapers</small></a></li>
+              <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Blogs</small></a></li>
+              <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Tutorials</small></a></li>
           </ui>
         </div>
-        <div class="col-md-2 p-0">
-          <h6 class="text-uppercase text-white">Useful links</h6>
-          <ui class="nav flex-sm-column p-0">
-              <li class="navbar-nav nav-item"><a href="#!" class="nav-link">Profile</a></li>
-              <li class="navbar-nav nav-item"><a href="#!" class="nav-link">Become a Patron</a></li>
-              <li class="navbar-nav nav-item"><a href="#!" class="nav-link">Shipping Rates</a></li>
+        <div class="col-sm-2 m-0 p-0">
+          <h6 class="text-uppercase text-white m-0 pb-1">Useful links</h6>
+          <ui class="nav flex-column m-0 p-0">
+              <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Profile</small></a></li>
+              <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Become a Patron</small></a></li>
+              <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Shipping Rates</small></a></li>
           </ui>
         </div>
-        <div class="col-md-2 p-0">
-          <h6 class="text-uppercase text-white">Contact</h6>
-            <ui class="nav flex-sm-column text-white p-0">
-              <li class="navbar-nav nav-item"><i class="fa fa-home"></i>Gujarat, India</li>
-              <li class="navbar-nav nav-item"><i class="fa fa-envelope"></i>info@coderzcolumn.com</li>
+        <div class="col-sm-2 m-0 p-0">
+          <h6 class="text-uppercase text-white m-0 pb-1">Contact</h6>
+            <ui class="nav flex-column text-white m-0 p-0">
+                <li class="navbar-nav nav-item"><i class="fa fa-home p-0 m-0"><small>Gujarat, India</small></i></li>
+                <li class="navbar-nav nav-item"><i class="fa fa-envelope p-0 m-0"><small>info@coderzcolumn.com</small></i></li>
               <!--<li class="navbar-nav nav-item"><i class="fa fa-phone"></i>+ 01 234 567 88</li>
               <li class="navbar-nav nav-item"><i class="fa fa-print"></i>+ 01 234 567 89</li>-->
           </ui>
         </div>
-        <div class="navbar-nav text-white col-md-2 p-0">
+        <div class="navbar-nav text-white col-md-2">
           <ui>
-              <li>© 2018 Copyright: <a href="https://coderzcolumn.com/" class=" text-white nav-link"> coderzcolumn.com</a></li>
+              <li class="m-0 p-0">© 2018 Copyright:
+                  <a href="https://coderzcolumn.com/" class=" text-white nav-link  p-0 m-0"><small>coderzcolumn.com</small></a></li>
           </ui>
         </div>
       </div>
