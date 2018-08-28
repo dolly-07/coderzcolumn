@@ -8,6 +8,6 @@ from django.http import HttpResponse
 from django.template import loader
 # Create your views here.
 
-def index(request):
+def about_home(request):
     msg = '<h1>Blogs Home Page</h1>'
-    return HttpResponse()
+    return HttpResponse(msg)

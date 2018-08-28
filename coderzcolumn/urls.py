@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from django.urls import path
+from blogs import views
 
 urlpatterns = [
-    #url(r'^$', name='home'),
-    url(r'^ccadminpg/', admin.site.urls),
+    path('home', views.index, name='home'),
+    path('ccadminpg/', admin.site.urls, name='admin'),
 
-    url('^blogs/', include('blogs.urls')),
-    url('^tutorials/', include('tutorials.urls')),
-    url('^about/', include('about.urls'))
+    path('blogs/', include('blogs.urls')),
+    path('tutorials/', include('tutorials.urls')),
+    path('about/', include('about.urls'))
 ]

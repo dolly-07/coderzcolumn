@@ -1,8 +1,10 @@
 from django.conf.urls import url
 from . import views
+from django.urls import path
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+
+    path('', views.blogs_home, name='blogs_home'),
     #url(r'^about/')
-    url(r'^(?P<category>[a-zA-Z]+)/(?P<blog_id>[0-9]+)$', views.display_blog, name='display_blog')
+    path('<str:category>/<int:blog_id>', views.display_blog, name='display_blog')
 ]

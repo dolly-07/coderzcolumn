@@ -10,23 +10,14 @@ class Migration(migrations.Migration):
     initial = True
 
     dependencies = [
+        ('blogs', '0001_initial'),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Author',
+            name='Tutorials',
             fields=[
-                ('author_id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='AUTHOR_ID')),
-                ('author_fname', models.CharField(max_length=50)),
-                ('author_lname', models.CharField(max_length=50)),
-                ('intro', models.CharField(max_length=200)),
-                ('about', models.CharField(max_length=1000)),
-            ],
-        ),
-        migrations.CreateModel(
-            name='Blogs',
-            fields=[
-                ('blog_id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='BLOG_ID')),
+                ('tut_id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='BLOG_ID')),
                 ('title', models.CharField(max_length=500)),
                 ('category', models.CharField(max_length=50)),
                 ('created_on', models.DateTimeField(default=datetime.datetime.now)),
@@ -35,7 +26,7 @@ class Migration(migrations.Migration):
                 ('dislikes', models.IntegerField()),
                 ('time_to_read', models.TimeField()),
                 ('tags', models.CharField(max_length=500)),
-                ('author', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='blogs.Author')),
+                ('author_id', models.ForeignKey(max_length=50, on_delete=django.db.models.deletion.CASCADE, to='blogs.Author')),
             ],
         ),
     ]
