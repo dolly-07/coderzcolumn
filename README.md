@@ -12,7 +12,7 @@ CoderzColumn is developed using Python3 (v3.6.4), Django (v2.1) for server side 
 * python manage.py runserver
 * Open in browser http://localhost:8000 to bring up coderzcolumn on local.
 
-#### Note: We have not kept Bootstrap files in code. It's included as links. So in order to see bootstrap changes you'll need internet connection.
+#### Note: We have not kept Bootstrap files in code. It's included as links hence will be downloaded from cache of bootstrap CDN. So in order to see bootstrap changes you'll need internet connection.
 
 ### How to contribute to coderzcolumn:
 * Fork a branch from coderzcolumn master.
