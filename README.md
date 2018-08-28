@@ -19,3 +19,7 @@ CoderzColumn is developed using Python3 (v3.6.4), Django (v2.1) for server side 
 * Make changes and test them.
 * Raise pull request with reviewers.
 * Once reviewers approve your changes then it'll be merged to master branch.
+
+
+### Request to submit bug / addition of feature
+Please follow template created for raising bu or creating new feature when raising new issue.
