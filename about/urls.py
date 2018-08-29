@@ -3,6 +3,8 @@ from . import views
 from django.urls import path
 
 
+app_name = 'about'
+
 urlpatterns = [
-    url('', views.about_home, name='about')
+    url('', views.about, name='about')
 ]

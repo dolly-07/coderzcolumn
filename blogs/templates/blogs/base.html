@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Blogs Page</title>
-
+    <title>{% block title %}{% endblock %}</title>
+    {% load staticfiles %}
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -18,25 +18,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </head>
 <body>
-
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
     <div class="container-fluid m-0 p-0">
         <a class="navbar-brand font-italic" href="{% url 'home' %}" data-toggle="tooltip" title="Hooray!">
             <img src="../static/blogs/images/cc.png" class="img-thumbnail" alt="" style="width:40px;height:30px;"> CoDerZcoLuMn
         </a>
+
         <form class="form-inline" action="" method="post">
-            <input class="form-control" type="text" placeholder="Enter Text">&nbsp;
-            <button class="btn btn-success" type="submit">Search</button>
+            <input class="form-control" type="text" placeholder="Search">&nbsp;
+            <button class="btn btn-success" type="submit">Go</button>
         </form>
         <ul class="navbar-nav">
             <li class="navbar-nav">
-                <a class="text-danger nav nav-link" href="">About</a>
+                <a class="text-danger nav nav-link" href="{% url 'about:about' %}">About</a>
             </li>
             <li class="navbar-nav">
                 <a class="text-success nav nav-link" href="">ResearchPapers</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="text-primary nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" title="Hooray!">
+                <a class="text-primary nav-link dropdown-toggle" href="{% url 'blogs:blogs_home' %}" id="navbardrop" data-toggle="dropdown" title="Hooray!">
                 Blogs
                 </a>
                 <div class="dropdown-menu bg-dark">
@@ -48,7 +48,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="text-warning nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown" title="Hooray!">
+                <a class="text-warning nav-link dropdown-toggle" href="{% url 'tutorials:tutorials_home' %}" id="navbardrop1" data-toggle="dropdown" title="Hooray!">
                 Tutorials
                 </a>
                 <div class="dropdown-menu bg-dark">
@@ -60,41 +60,14 @@
                 </div>
             </li>
             <li class="">
-                <a class="nav-link" href="{% url 'blogs_home' %}" data-toggle="tooltip" title="Hooray!">Login</a>
+                <a class="nav-link" href="{% url 'login' %}" data-toggle="tooltip" title="Hooray!">Login | Register</a>
             </li>
         </ul>
     </div>
 </nav>
 
-
-{% if blogs %}
-<div class="card-columns" style="margin-top:63px;margin-bottom:110px;margin-left:15px;margin-right:15px;">
-    {% for blog in blogs %}
-    <div class="card shadow-lg rounded">
-        <div class="card-header">
-            <span class="badge badge-primary">{{ blog.category }}</span>
-            <span class="float-right">
-                <span class="badge badge-danger">Read </span>
-                <span class="badge badge-secondary">{{ blog.time_to_read }} mins</span>
-            </span>
-        </div>
-        <div class="card-body text-center bg-secondary">
-            <a class="card-link text-white" href="/blogs/{{ blog.category }}/{{ blog.blog_id }}">{{ blog.title }}</a>
-        </div>
-        <div class="card-footer">
-            <!--<span class="float-left">-->
-                <span class="badge badge-success">Author </span>
-                <span class="badge badge-secondary">{{ blog.author }}</span>
-            <!--</span>-->
-            <span class="float-right"><span class="badge badge-warning">{{ blog.tags }}</span></span>
-        </div>
-    </div>
-    {% endfor %}
-
-{% else %}
-    <h2>We don't have any blogs to display</h2>
-</div>
-{% endif %}
+{% block body %}
+{% endblock %}
 
 <nav class="navbar bg-dark navbar-dark fixed-bottom">
     <div class="container-fluid m-0 p-0">
@@ -105,7 +78,7 @@
               SEO, Android, Python, Data Science, Machine Learning.</small></p>
         </div>
         <div class="col-sm-2 m-0 p-0">
-          <h6 class="text-uppercase text-white m-0 pb-1">Products</h6>
+          <h6 class="text-white m-0 pb-1">Products</h6>
           <ui class="nav flex-column m-0 p-0">
               <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>ResearchPapers</small></a></li>
               <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Blogs</small></a></li>
@@ -113,7 +86,7 @@
           </ui>
         </div>
         <div class="col-sm-2 m-0 p-0">
-          <h6 class="text-uppercase text-white m-0 pb-1">Useful links</h6>
+          <h6 class="text-white m-0 pb-1">Useful links</h6>
           <ui class="nav flex-column m-0 p-0">
               <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Profile</small></a></li>
               <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Become a Patron</small></a></li>
@@ -121,7 +94,7 @@
           </ui>
         </div>
         <div class="col-sm-2 m-0 p-0">
-          <h6 class="text-uppercase text-white m-0 pb-1">Contact</h6>
+          <h6 class="text-white m-0 pb-1">Contact</h6>
             <ui class="nav flex-column text-white m-0 p-0">
                 <li class="navbar-nav nav-item"><i class="fa fa-home p-0 m-0"><small>Gujarat, India</small></i></li>
                 <li class="navbar-nav nav-item"><i class="fa fa-envelope p-0 m-0"><small>info@coderzcolumn.com</small></i></li>

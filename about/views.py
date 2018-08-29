@@ -1,13 +1,8 @@
 # -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.shortcuts import render
+from blogs.models import Author
 
-# Create your views here.
-from django.http import HttpResponse
-from django.template import loader
-# Create your views here.
 
-def about_home(request):
-    msg = '<h1>Blogs Home Page</h1>'
-    return HttpResponse(msg)
+def about(request):
+    authors = Author.objects.all()
+    return render(request, 'about/about.html', {'authors': authors})

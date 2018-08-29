@@ -8,13 +8,13 @@ import datetime
 
 class Author(models.Model):
     author_id = models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='AUTHOR_ID')
-    author_fname = models.CharField(max_length=50)
-    author_lname = models.CharField(max_length=50)
+    nick_name = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
     intro = models.CharField(max_length=200)
     about = models.CharField(max_length=1000)
 
     def __str__(self):
-        return self.author_fname + ' ' + self.author_lname
+        return self.nick_name
 
 class Blogs(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
