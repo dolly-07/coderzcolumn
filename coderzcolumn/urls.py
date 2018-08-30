@@ -20,11 +20,15 @@ from blogs import views
 
 urlpatterns = [
     path('', views.index, name='home'),
+    path('logout/', views.lgout, name='logout'),
     path('ccadminpg/', admin.site.urls, name='admin'),
 
+    path('howto/', views.index, name='howto'),
+    path('researchpapers/', views.index, name='research'),
     path('blogs/', include('blogs.urls')),
     path('tutorials/', include('tutorials.urls')),
     path('about/', include('about.urls')),
-    path('login/', views.login, name='login')
+    path('login/', views.UserFormView.as_view(), name='login')
+
 
 ]

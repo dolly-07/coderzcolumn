@@ -3,80 +3,88 @@
 {% block title %}Login Page{% endblock %}
 
 {% block body %}
-<div class="card-deck small font-weight-bold" style="margin-top:63px;margin-bottom:110px;margin-left:15px;margin-right:15px;">
-    <div class="card shadow-lg rounded p-3">
-        <form action="#" method="post">
-            <div class="form-group m-1">
-                <label for="lemail">Email address:</label>
-                <input type="email" class="form-control" id="lemail">
-            </div>
-            <div class="form-group m-1">
-                <label for="lpwd">Password:</label>
-                <input type="password" class="form-control" id="lpwd">
-            </div>
-            <div class="form-group form-check mb-2">
-                <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember me
-                </label>
-            </div>
-            <button type="submit" class="btn btn-success">Log In</button>
-        </form>
-    </div>
-    <div class="card shadow-lg rounded p-3">
-        <form action="#" method="post" class="">
-            <div class="form-group m-1">
-                <label for="nick"><font color="red">*</font> Nick Name:</label>
-                <input type="text" class="form-control" id="nick">
-                <!--<label for="lname"><font color="red">*</font> Last Name:</label>
-                <input type="text" class="form-control" id="lname">-->
-            </div>
+<div style="margin-top:63px;margin-bottom:110px;margin-left:15px;margin-right:15px;">
+    {% if error_message %}
+        <div class="alert alert-danger alert-dismissible">
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+            <strong>Failure!</strong> {{ error_message }}
+        </div>
+    {% endif %}
+    <div class="card-deck small font-weight-bold">
 
-            <div class="form-group m-1">
-                <label for="remail"><font color="red">*</font> Email address:</label>
-                <input type="email" class="form-control" id="remail">
-            </div>
-            <div class="form-group m-1">
-                <label for="rpwd"><font color="red">*</font> Password:</label>
-                <input type="password" class="form-control" id="rpwd">
-            </div>
-            <div class="form-group m-1">
-                <label for="title">Title:</label>
-                <input type="title" class="form-control" id="title">
-            </div>
-            <div class="form-group m-1">
-                <label for="about">About:</label>
-                <textarea class="form-control" rows="2" id="about">I am ... I like to ...</textarea>
-            </div>
-            <!--<div class="form-group m-1">
-                <label for="profile_pic">Profile Picture:</label>
-                <input type="file" class="form-control-file border" id="profile_pic">
-            </div>-->
-            <div class="form-group form-check m-1">
-                <label class="form-check-label">
-                <input class="form-check-input" type="radio">
-                    <font color="red">*</font> I accept terms and conditions.
-                    <a href="#" data-toggle="modal" data-target="#myModal">Terms & Conditions</a>
-                    <div class="modal fade" id="myModal">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title">Terms & Conditions</h4>
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="card shadow-lg rounded p-3">
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group m-1">
+                    <label for="user">Username:</label>
+                    <input type="text" class="form-control" id="user" name="user" value="Enter Username">
+                </div>
+                <div class="form-group m-1">
+                    <label for="lpwd">Password:</label>
+                    <input type="password" class="form-control" id="lpwd" name="lpwd" value="Enter Password">
+                </div>
+                <div class="form-group form-check mb-2">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox"> Remember me
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-success">Log In</button>
+            </form>
+        </div>
+        <div class="card shadow-lg rounded p-3">
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group m-1">
+                    <label for="nick"><font color="red">*</font> Nick Name:</label>
+                    <input type="nick" class="form-control" id="nick" name="nick" value="Enter Username">
+                </div>
+                <div class="form-group m-1">
+                    <label for="remail"><font color="red">*</font> Email address:</label>
+                    <input type="email" class="form-control" id="remail" name="remail" value="abc@xyz.com">
+                </div>
+                <div class="form-group m-1">
+                    <label for="rpwd"><font color="red">*</font> Password:</label>
+                    <input type="password" class="form-control" id="rpwd" name="rpwd" value="password">
+                </div>
+                <div class="form-group m-1">
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control" id="title" name="intro" value="Developer">
+                </div>
+                <div class="form-group m-1">
+                    <label for="about">About:</label>
+                    <textarea class="form-control" rows="2" id="about" name="about">I am ... I like to ...</textarea>
+                </div>
+                <!--<div class="form-group m-1">
+                    <label for="profile_pic">Profile Picture:</label>
+                    <input type="file" class="form-control-file border" id="profile_pic">
+                </div>-->
+                <div class="form-group form-check m-1">
+                    <label class="form-check-label">
+                    <input class="form-check-input" type="radio" name="terms" id="terms">
+                        <font color="red">*</font> I accept terms and conditions.
+                        <a href="#" data-toggle="modal" data-target="#myModal">Terms & Conditions</a>
+                        <div class="modal fade" id="myModal">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Terms & Conditions</h4>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                <div class="modal-body">
+                                  Terms & Conditions
                                 </div>
-                            <div class="modal-body">
-                              Terms & Conditions
+                                <div class="modal-footer">
+                                  <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                                </div>
+                              </div>
                             </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-                            </div>
-                          </div>
                         </div>
-                    </div>
-                </label>
-            </div>
+                    </label>
+                </div>
 
-            <button type="submit" class="btn btn-success">Register</button>
-        </form>
+                <button type="submit" class="btn btn-success">Register</button>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}

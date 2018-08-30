@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 
 from django.db import models
 import datetime
-# Create your models here.
 
 
 class Author(models.Model):
@@ -12,6 +11,7 @@ class Author(models.Model):
     email = models.EmailField(max_length=50)
     intro = models.CharField(max_length=200)
     about = models.CharField(max_length=1000)
+    can_blog = models.BooleanField(default=False)
 
     def __str__(self):
         return self.nick_name

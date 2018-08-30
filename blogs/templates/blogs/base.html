@@ -25,15 +25,19 @@
         </a>
 
         <form class="form-inline" action="" method="post">
+            {% csrf_token %}
             <input class="form-control" type="text" placeholder="Search">&nbsp;
             <button class="btn btn-success" type="submit">Go</button>
         </form>
         <ul class="navbar-nav">
             <li class="navbar-nav">
-                <a class="text-danger nav nav-link" href="{% url 'about:about' %}">About</a>
+                <a class="nav nav-link" href="{% url 'about:about' %}">About</a>
             </li>
             <li class="navbar-nav">
-                <a class="text-success nav nav-link" href="">ResearchPapers</a>
+                <a class="nav nav-link text-info" href="{% url 'howto' %}">HowTos</a>
+            </li>
+            <li class="navbar-nav">
+                <a class="text-success nav nav-link" href="{% url 'research' %}">ResearchPapers</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="text-primary nav-link dropdown-toggle" href="{% url 'blogs:blogs_home' %}" id="navbardrop" data-toggle="dropdown" title="Hooray!">
@@ -59,9 +63,21 @@
                     <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">Data Science</a>
                 </div>
             </li>
-            <li class="">
-                <a class="nav-link" href="{% url 'login' %}" data-toggle="tooltip" title="Hooray!">Login | Register</a>
-            </li>
+            {% if username is not None %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbardrop2" data-toggle="dropdown" title="Hooray!">
+                        Hello {{ username }}
+                    </a>
+                    <div class="dropdown-menu bg-dark">
+                        <a class="dropdown-item text-danger" href="#" data-toggle="tooltip" title="Hooray!">My Profile</a>
+                        <a class="dropdown-item text-danger" href="/logout" data-toggle="tooltip" title="Hooray!">Logout</a>
+                </div>
+                </li>
+            {% else %}
+                <li class="">
+                    <a class="nav-link text-danger" href="{% url 'login' %}" data-toggle="tooltip" title="Hooray!">Login | Register</a>
+                </li>
+            {% endif %}
         </ul>
     </div>
 </nav>
@@ -80,9 +96,10 @@
         <div class="col-sm-2 m-0 p-0">
           <h6 class="text-white m-0 pb-1">Products</h6>
           <ui class="nav flex-column m-0 p-0">
-              <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>ResearchPapers</small></a></li>
-              <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Blogs</small></a></li>
-              <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Tutorials</small></a></li>
+              <!--<li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>ResearchPapers</small></a></li>-->
+              <li class="navbar-nav nav-item"><a href="{% url 'blogs:blogs_home' %}" class="nav-link p-0 m-0"><small>Blogs</small></a></li>
+              <li class="navbar-nav nav-item"><a href="{% url 'tutorials:tutorials_home' %}" class="nav-link p-0 m-0"><small>Tutorials</small></a></li>
+              <!--<li class="navbar-nav nav-item"><a href="{% url 'howto' %}" class="nav-link p-0 m-0"><small>HowTos</small></a></li>-->
           </ui>
         </div>
         <div class="col-sm-2 m-0 p-0">
@@ -90,7 +107,7 @@
           <ui class="nav flex-column m-0 p-0">
               <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Profile</small></a></li>
               <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Become a Patron</small></a></li>
-              <li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Shipping Rates</small></a></li>
+              <!--<li class="navbar-nav nav-item"><a href="#!" class="nav-link p-0 m-0"><small>Shipping Rates</small></a></li>-->
           </ui>
         </div>
         <div class="col-sm-2 m-0 p-0">
@@ -105,7 +122,7 @@
         <div class="navbar-nav text-white col-md-2">
           <ui>
               <li class="m-0 p-0">© 2018 Copyright:
-                  <a href="https://coderzcolumn.com/" class=" text-white nav-link  p-0 m-0"><small>coderzcolumn.com</small></a></li>
+                  <a href="{% url 'home' %}" class=" text-white nav-link  p-0 m-0"><small>coderzcolumn.com</small></a></li>
           </ui>
         </div>
       </div>

@@ -14,34 +14,36 @@
     </div>
     <div class="card-columns">
     {% for author in authors %}
-        <div class="card shadow-lg" style="width:300px;height:410px;">
-            <img class="card-img-top" style="width:300px;height:300px" src="../static/blogs/images/{{ author.nick_name.lower }}.jpg" alt="Card image"/>
-            <div class="card-body">
-                <h4 class="card-title">{{ author }}</h4>
-                <!--<p class="card-text">{{ author.intro }}</p>
-                <p class="card-text">{{ author.about }}</p>
-                <p class="card-text">{{ author.email }}</p>-->
-                <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal{{ author.author_id }}">See Profile</a>
-            </div>
-            <div class="modal fade" id="modal{{ author.author_id }}">
-                <div class="modal-dialog modal-dialog-centered">
-                      <div class="modal-content">
-                          <div class="modal-header">
-                              <h4 class="modal-title">{{ author }}</h4>
-                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+        {% if author.can_blog %}
+            <div class="card shadow-lg" style="width:300px;height:410px;">
+                <img class="card-img-top rounded" style="width:300px;height:300px" src="../static/blogs/images/{{ author.nick_name.lower }}.jpg" alt="Card image"/>
+                <div class="card-body">
+                    <h4 class="card-title">{{ author }}</h4>
+                    <!--<p class="card-text">{{ author.intro }}</p>
+                    <p class="card-text">{{ author.about }}</p>
+                    <p class="card-text">{{ author.email }}</p>-->
+                    <a href="#" class="btn btn-success" data-toggle="modal" data-target="#modal{{ author.author_id }}">See Profile</a>
+                </div>
+                <div class="modal fade" id="modal{{ author.author_id }}">
+                    <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h4 class="modal-title">{{ author }}</h4>
+                                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              </div>
+                            <div class="modal-body">
+                                <p class="card-text"><b>Intro:   </b>{{ author.intro }}</p>
+                                <p class="card-text"><b>About:   </b>{{ author.about }}</p>
+                                <p class="card-text"><b>Contact: </b>{{ author.email }}</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
+                            </div>
                           </div>
-                        <div class="modal-body">
-                            <p class="card-text"><b>Intro:   </b>{{ author.intro }}</p>
-                            <p class="card-text"><b>About:   </b>{{ author.about }}</p>
-                            <p class="card-text"><b>Contact: </b>{{ author.email }}</p>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-success" data-dismiss="modal">Close</button>
-                        </div>
-                      </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endif %}
     {% endfor %}
     </div>
 </div>
