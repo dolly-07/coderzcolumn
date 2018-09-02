@@ -23,3 +23,6 @@ CoderzColumn is developed using Python3 (v3.6.4), Django (v2.1) for server side 
 
 ### Request to submit bug / addition of feature
 Please follow template created for raising bug or creating new feature when raising new issue.
+
+## How to setup conda env:
+* conda env -f coderzcolumn.yaml
