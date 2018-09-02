@@ -20,7 +20,7 @@
 <body>
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
     <div class="container-fluid m-0 p-0">
-        <a class="navbar-brand font-italic" href="{% url 'home' %}" data-toggle="tooltip" title="Hooray!">
+        <a class="navbar-brand" href="{% url 'home' %}" data-toggle="tooltip" title="Hooray!">
             <img src="../static/blogs/images/cc.png" class="img-thumbnail" alt="" style="width:40px;height:30px;"> CoDerZcoLuMn
         </a>
 
@@ -34,38 +34,38 @@
                 <a class="nav nav-link" href="{% url 'about:about' %}">About</a>
             </li>
             <li class="navbar-nav">
-                <a class="nav nav-link text-info" href="{% url 'howto' %}">HowTos</a>
+                <a class="nav nav-link" href="{% url 'howto' %}">HowTos</a>
             </li>
             <li class="navbar-nav">
-                <a class="text-success nav nav-link" href="{% url 'research' %}">ResearchPapers</a>
+                <a class="nav nav-link" href="{% url 'research' %}">ResearchPapers</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="text-primary nav-link dropdown-toggle" href="{% url 'blogs:blogs_home' %}" id="navbardrop" data-toggle="dropdown" title="Hooray!">
+                <a class="nav-link dropdown-toggle" href="{% url 'blogs:blogs_home' %}" id="navbardrop" data-toggle="dropdown" title="Hooray!">
                 Blogs
                 </a>
-                <div class="dropdown-menu bg-dark">
-                    <a class="dropdown-item text-primary" href="#" data-toggle="tooltip" title="Hooray!">SEO</a>
-                    <a class="dropdown-item text-primary" href="#" data-toggle="tooltip" title="Hooray!">Android</a>
-                    <a class="dropdown-item text-primary" href="#" data-toggle="tooltip" title="Hooray!">Machine Learning</a>
-                    <a class="dropdown-item text-primary" href="#" data-toggle="tooltip" title="Hooray!">Python</a>
-                    <a class="dropdown-item text-primary" href="#" data-toggle="tooltip" title="Hooray!">Data Science</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">SEO</a>
+                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Android</a>
+                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Machine Learning</a>
+                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Python</a>
+                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Data Science</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="text-warning nav-link dropdown-toggle" href="{% url 'tutorials:tutorials_home' %}" id="navbardrop1" data-toggle="dropdown" title="Hooray!">
+                <a class="nav-link dropdown-toggle" href="{% url 'tutorials:tutorials_home' %}" id="navbardrop1" data-toggle="dropdown" title="Hooray!">
                 Tutorials
                 </a>
-                <div class="dropdown-menu bg-dark">
-                    <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">SEO</a>
-                    <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">Android</a>
-                    <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">Machine Learning</a>
-                    <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">Python</a>
-                    <a class="dropdown-item text-warning" href="#" data-toggle="tooltip" title="Hooray!">Data Science</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">SEO</a>
+                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Android</a>
+                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Machine Learning</a>
+                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Python</a>
+                    <a class="dropdown-item" href="#" data-toggle="tooltip" title="Hooray!">Data Science</a>
                 </div>
             </li>
             {% if username is not None %}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle text-danger" href="#" id="navbardrop2" data-toggle="dropdown" title="Hooray!">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown" title="Hooray!">
                         Hello {{ username }}
                     </a>
                     <div class="dropdown-menu bg-dark">
@@ -75,7 +75,7 @@
                 </li>
             {% else %}
                 <li class="">
-                    <a class="nav-link text-danger" href="{% url 'login' %}" data-toggle="tooltip" title="Hooray!">Login | Register</a>
+                    <a class="nav-link" href="{% url 'login' %}" data-toggle="tooltip" title="Hooray!">Login | Register</a>
                 </li>
             {% endif %}
         </ul>

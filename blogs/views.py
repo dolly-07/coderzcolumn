@@ -9,9 +9,10 @@ from .forms import UserForm
 
 
 def index(request):
+    blogs = Blogs.objects.all()
     username = get_user(request)
     username = username if username.is_authenticated else None
-    return render(request, 'blogs/home.html', {'username': username})
+    return render(request, 'blogs/home.html', {'username': username, 'blogs': blogs[:3]})
 
 
 def lgout(request):
